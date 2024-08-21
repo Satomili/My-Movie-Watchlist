@@ -7,10 +7,12 @@ import Watchlist from './Watchlist'
 function App() {
 
   return (
-    <>
-      <Home />
-      <Watchlist />
-    </>
+    <Router>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/watchlist" element={<Watchlist />} />
+        </Routes>
+    </Router>
   )
 }
 
