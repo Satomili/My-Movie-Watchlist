@@ -9,8 +9,12 @@ export default function searchForm() {
         setInputValue(e.target.value)
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault()
+    }
+
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <i className="fa-solid fa-magnifying-glass"></i>
             <input 
                 type="search" 
