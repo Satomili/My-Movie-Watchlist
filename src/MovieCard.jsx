@@ -1,11 +1,13 @@
+import "./MovieCard.css"
+
 export default function MovieCard({movie}) {
 
     const posterUrl = movie.Poster !== "N/A" ? movie.Poster : "./assets/no-image-placeholder.png"
 
     return (
         <>
-            <div>
-                <img src={posterUrl} alt="Movie Poster" />
+            <div className="movie-card">
+                <img className="movie-poster" src={posterUrl} alt="Movie Poster" />
                 <div className="movie-info-container">
                     <div className="movie-info-one">
                         <h2 className="movie-title">{movie.Title}</h2>
