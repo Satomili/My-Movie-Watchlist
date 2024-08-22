@@ -1,7 +1,7 @@
 import { useState } from "react"
 import "./SearchForm.css"
 
-export default function searchForm() {
+export default function searchForm({fetchMovies}) {
     
     const [inputValue, setInputValue] = useState('')
 
@@ -11,6 +11,7 @@ export default function searchForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        fetchMovies(inputValue)
     }
 
     return (
