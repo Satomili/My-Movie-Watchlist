@@ -1,6 +1,7 @@
 import MovieCard from "./MovieCard"
 
 export default function MovieList({movies}) {
+
     return (
         <div>
             {movies.length > 0 ? (

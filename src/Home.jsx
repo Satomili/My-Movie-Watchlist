@@ -11,11 +11,21 @@ export default function Home() {
         const response = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${value}`)
         const data = await response.json()
         if(data.Search) {
-            setMovies(data.Search)
-            console.log(data.Search)
+            const moviesWithDetails = []
+            for(const movie of data.Search) {
+                const movieDetails = await fetchMovieDetails(movie.imdbID)
+                moviesWithDetails.push(movieDetails)
+            }
+            setMovies(moviesWithDetails)
         } else {
             console.log("no movie")
         }
+    }
+
+    const fetchMovieDetails = async(imdbID) => {
+        const response = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&i=${imdbID}&plot=short&r=json`)
+        const data = await response.json()
+        return data
     }
 
     return (
