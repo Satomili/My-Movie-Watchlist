@@ -10,7 +10,12 @@ export default function Home() {
     const fetchMovies = async(value) => {
         const response = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${value}`)
         const data = await response.json()
-        console.log(data)
+        if(data.Search) {
+            setMovies(data.Search)
+            console.log(data.Search)
+        } else {
+            console.log("no movie")
+        }
     }
 
     return (
