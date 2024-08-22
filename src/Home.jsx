@@ -22,7 +22,7 @@ export default function Home() {
         <div>
             <Header />
             <SearchForm fetchMovies={fetchMovies} />
-            <MovieList />
+            <MovieList movies={movies} />
         </div>
     )
 }

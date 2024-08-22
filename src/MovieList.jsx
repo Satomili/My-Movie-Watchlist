@@ -1,5 +1,13 @@
-export default function MovieList() {
+import MovieCard from "./MovieCard"
+
+export default function MovieList({movies}) {
     return (
-        <h1>This is MovieList!!</h1>
+        <div>
+            {movies.length > 0 ? (
+                movies.map((movie) => <MovieCard key={movie.imdbID} movie={movie}/>)
+            ) : (
+                <p>No movies to display</p>
+            )}
+        </div>
     )
 }
