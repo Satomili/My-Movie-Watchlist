@@ -36,6 +36,12 @@ function App() {
         isShow: true,
         isInWatchlist: false
       })
+    } else {
+      setNotification({ 
+        message: `"${movie.Title}" is already in your watchlist!`, 
+        isShow: true,
+        isInWatchlist: false
+      })
     }
   }
 
