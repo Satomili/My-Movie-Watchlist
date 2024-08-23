@@ -18,13 +18,11 @@ function App() {
   const addToMyWatchlist = (movie) => {
     if (!myWatchlist.find(({ imdbID }) => imdbID === movie.imdbID )) {
       setMyWatchlist((prevMyWatchlist) => [...prevMyWatchlist, movie])
-      console.log("added")
     }
   }
 
   const removeFromMyWatchlist = (imdbID) => {
     setMyWatchlist((prevMyWatchlist) => prevMyWatchlist.filter((movie) => movie.imdbID !== imdbID))
-    console.log("removed")
   }
 
   return (
