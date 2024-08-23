@@ -12,7 +12,7 @@ export default function MovieCard({movie}) {
                     <div className="movie-info-one">
                         <h2 className="movie-title">{movie.Title}</h2>
                         <p className="movie-imdbRating">
-                            <i className="fa-solid fa-star star-icon"></i> {movie.imdbRating}
+                            <i className="fa-solid fa-star"></i> {movie.imdbRating}
                         </p>
                     </div>
                     <div className="movie-info-two">
