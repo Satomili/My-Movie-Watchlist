@@ -5,7 +5,7 @@ export default function Watchlist() {
     return (
         <div>
             <Header />
-            <MovieList />
+            <MovieList isInWatchlist={true} />
         </div>
     )
 }

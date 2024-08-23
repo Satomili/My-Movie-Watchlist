@@ -32,7 +32,7 @@ export default function Home() {
         <div>
             <Header />
             <SearchForm fetchMovies={fetchMovies} />
-            <MovieList movies={movies} />
+            <MovieList movies={movies} isInWatchlist={false} />
         </div>
     )
 }

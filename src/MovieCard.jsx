@@ -1,6 +1,7 @@
 import "./MovieCard.css"
+import MovieCardButton from "./MovieCardButton"
 
-export default function MovieCard({movie}) {
+export default function MovieCard({movie, isInWatchlist}) {
 
     const posterUrl = movie.Poster !== "N/A" ? movie.Poster : "./assets/no-image-placeholder.png"
 
@@ -22,7 +23,11 @@ export default function MovieCard({movie}) {
                         <p className="movie-genre">
                             <i className="fa-solid fa-video"></i> {movie.Genre}
                         </p>
-                        <button>button</button>
+                        {isInWatchlist ? (
+                            <MovieCardButton label="- Remove" />
+                        ) : (
+                            <MovieCardButton label="+ Watchlist"/>
+                        )}
                     </div>
                     <p className="movie-plot">{movie.Plot}</p>
                 </div>
