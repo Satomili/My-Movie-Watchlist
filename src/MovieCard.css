@@ -78,10 +78,7 @@ hr {
 
     .movie-card {
         width: 100%;
-    }
-
-    hr {
-        display: none;
+        max-width: 800px;
     }
 
     .movie-poster {
@@ -102,6 +99,10 @@ hr {
 
     .movie-info-two {
         flex-direction: column;
+    }
+
+    hr {
+        display: none;
     }
 }
 
