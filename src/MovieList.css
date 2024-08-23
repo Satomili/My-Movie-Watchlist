@@ -36,6 +36,11 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
+
+    .movie-list-message {
+        position: absolute;
+        justify-self: center;
+    }
 }
 
 @media(min-width: 1500px) {
