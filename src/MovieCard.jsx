@@ -24,7 +24,7 @@ export default function MovieCard({movie, isInWatchlist, onAdd, onRemove}) {
                             <i className="fa-solid fa-video"></i> {movie.Genre}
                         </p>
                         {isInWatchlist ? (
-                            <MovieCardButton onClick={() => onRemove(movie.imdb)} label="- Remove" />
+                            <MovieCardButton onClick={() => onRemove(movie.imdbID)} label="- Remove" />
                         ) : (
                             <MovieCardButton onClick={() => onAdd(movie)} label="+ Watchlist"/>
                         )}

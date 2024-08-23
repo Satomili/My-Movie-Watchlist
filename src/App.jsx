@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react'
 function App() {
 
   const [myWatchlist, setMyWatchlist] = useState(() => {
-    return JSON.parse(localStorage.getItem("myMovieWatchlist")) || []
+    return JSON.parse(localStorage.getItem("myWatchlist")) || []
   })
 
   useEffect(() => {
@@ -36,7 +36,7 @@ function App() {
             />
             <Route 
               path="/watchlist" 
-              element={<Watchlist removeFromMyWatchlist={removeFromMyWatchlist} />}  
+              element={<Watchlist myWatchlist={myWatchlist} removeFromMyWatchlist={removeFromMyWatchlist} />}  
             />
         </Routes>
     </Router>
