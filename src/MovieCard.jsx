@@ -1,9 +1,10 @@
 import "./MovieCard.css"
 import MovieCardButton from "./MovieCardButton"
+import placeholderImage from "./assets/no-image-placeholder.png"
 
 export default function MovieCard({movie, isInWatchlist, onAdd, onRemove}) {
 
-    const posterUrl = movie.Poster !== "N/A" ? movie.Poster : "./assets/no-image-placeholder.png"
+    const posterUrl = movie.Poster !== "N/A" ? movie.Poster : placeholderImage
 
     return (
         <>
