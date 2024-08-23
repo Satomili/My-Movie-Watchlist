@@ -19,6 +19,9 @@
 
 .movie-title {
     margin: 0.635em 0;
+    font-size: 1.125em;
+    max-width: 290px;
+    font-weight: 500;
 }
 
 .movie-imdbRating i {
@@ -49,3 +52,61 @@ hr {
     max-width: 460px;
 }
 
+@media(min-width: 768px) {
+    .movie-card,
+    hr {
+        max-width: 500px;
+    }
+
+    .movie-card p {
+        font-size: 0.8em;
+    }
+
+    .movie-plot {
+        font-size: 0.9em !important;
+        max-width: 400px;
+    }
+
+    .movie-runtime i,
+    .movie-genre i {
+        display: inline-block;
+    }
+
+}
+
+@media(min-width: 992px) {
+
+    .movie-card {
+        width: 100%;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .movie-poster {
+        width: 150px;
+    }
+
+    .movie-title {
+        margin: 0;
+        font-size: 1.3em;
+        max-width: 290px;
+        font-weight: 500;
+    }
+
+    .movie-info-one {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .movie-info-two {
+        flex-direction: column;
+    }
+}
+
+@media(min-width: 1500px) {
+    .movie-card {
+        width: 100%;
+    }
+}

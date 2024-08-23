@@ -1,5 +1,27 @@
-button {
+.movie-button {
     background-color: #121212;
     border: none;
     color: #FFFFFF;
+    font-size: 0.65em;
+}
+
+/* 
+=================================
+   Media Queries
+=================================
+*/
+@media(min-width: 768px) {
+    .movie-button {
+        font-size: 0.8em;
+    }
+}
+
+@media(min-width: 992px) {
+    .movie-button {
+        border: 1px solid white;
+        border-radius: 6px;
+        width: 90px;
+        margin: 0.635em 0;
+        padding: 5px;
+    }
 }

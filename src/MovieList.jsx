@@ -15,15 +15,14 @@ export default function MovieList({ movies, isInWatchlist, onAdd, onRemove }) {
                     />
                 ))
             ) : (
-                <p>
-                    {isInWatchlist 
-                        ? "Your watchlist is empty..." 
-                        : <>
-                            <i className="fa-solid fa-film film-icon"></i>
-                            Start exploring by searching for movies!
-                          </>
-                    }
-                </p>
+                <div className="movie-list-message">
+                    <h2>
+                        {isInWatchlist 
+                            ? "Your watchlist is empty..." 
+                            : "Start exploring by searching for movies!"
+                        }
+                    </h2>
+                </div>
             )}
         </div>
     );

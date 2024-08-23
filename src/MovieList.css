@@ -5,3 +5,41 @@
 .movie-list hr:last-child {
     display: none;
 }
+
+.movie-list-message {
+    display: flex;
+    justify-content: center;
+    margin-top: 6.25rem;
+}
+
+.movie-list-message h2 {
+    color: #4B4B4B;
+    margin: 0;
+    font-size: 1.125rem;
+}
+
+/* 
+=================================
+   Media Queries
+=================================
+*/
+
+@media(min-width: 768px) {
+    .movie-list-message h2 {
+        font-size: 1.6em;
+    }
+}
+
+@media(min-width: 992px) {
+    .movie-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media(min-width: 1500px) {
+    .movie-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
