@@ -25,9 +25,15 @@ export default function MovieCard({movie, isInWatchlist, onAdd, onRemove}) {
                             <i className="fa-solid fa-video"></i> {movie.Genre}
                         </p>
                         {isInWatchlist ? (
-                            <MovieCardButton onClick={() => onRemove(movie.imdbID)} label="- Remove" />
+                            <MovieCardButton 
+                                onClick={() => onRemove(movie.imdbID)} 
+                                label={<><i className="fa-solid fa-circle-minus"></i> Remove</>} 
+                            />
                         ) : (
-                            <MovieCardButton onClick={() => onAdd(movie)} label="+ Watchlist"/>
+                            <MovieCardButton 
+                                onClick={() => onAdd(movie)} 
+                                label={<><i className="fa-solid fa-circle-plus"></i> Watchlist</>}
+                            />
                         )}
                     </div>
                     <p className="movie-plot">{movie.Plot}</p>
