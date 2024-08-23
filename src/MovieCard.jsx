@@ -24,9 +24,9 @@ export default function MovieCard({movie, isInWatchlist}) {
                             <i className="fa-solid fa-video"></i> {movie.Genre}
                         </p>
                         {isInWatchlist ? (
-                            <MovieCardButton label="- Remove" />
+                            <MovieCardButton handleClick={() => console.log("removed!!")} label="- Remove" />
                         ) : (
-                            <MovieCardButton label="+ Watchlist"/>
+                            <MovieCardButton handleClick={() => console.log("added")} label="+ Watchlist"/>
                         )}
                     </div>
                     <p className="movie-plot">{movie.Plot}</p>

@@ -1,8 +1,8 @@
 import "./MovieCardButton.css"
 
-export default function MovieCardButton({label}) {
+export default function MovieCardButton({label, handleClick}) {
     return (
-        <button>
+        <button onClick={handleClick}>
             {label}
         </button>
     )
