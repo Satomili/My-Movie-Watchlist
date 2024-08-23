@@ -1,7 +1,7 @@
 import MovieCard from "./MovieCard"
 import "./MovieList.css"
 
-export default function MovieList({movies, isInWatchlist}) {
+export default function MovieList({movies, isInWatchlist, onAdd, onRemove}) {
 
     return (
         <div className="movie-list">
@@ -11,6 +11,8 @@ export default function MovieList({movies, isInWatchlist}) {
                         key={movie.imdbID} 
                         movie={movie} 
                         isInWatchlist={isInWatchlist}
+                        onAdd={onAdd}
+                        onRemove={onRemove}
                     />
                 ))
             ) : (

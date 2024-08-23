@@ -1,11 +1,11 @@
 import Header from "./Header"
 import MovieList from "./MovieList"
 
-export default function Watchlist() {
+export default function Watchlist({ removeFromMyWatchlist }) {
     return (
         <div>
             <Header />
-            <MovieList isInWatchlist={true} />
+            <MovieList isInWatchlist={true} onRemove={removeFromMyWatchlist} />
         </div>
     )
 }

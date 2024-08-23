@@ -4,7 +4,7 @@ import MovieList from "./MovieList"
 import { useState } from "react"
 const apiKey = "5d1ecff" // API key for OMDB API
 
-export default function Home() {
+export default function Home({ addToMyWatchlist }) {
     const [movies, setMovies] = useState([])
 
     const fetchMovies = async(value) => {
@@ -32,7 +32,11 @@ export default function Home() {
         <div>
             <Header />
             <SearchForm fetchMovies={fetchMovies} />
-            <MovieList movies={movies} isInWatchlist={false} />
+            <MovieList 
+                movies={movies} 
+                isInWatchlist={false} 
+                onAdd={addToMyWatchlist} 
+            />
         </div>
     )
 }
