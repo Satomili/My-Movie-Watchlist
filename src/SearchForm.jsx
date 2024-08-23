@@ -19,6 +19,8 @@ export default function searchForm({fetchMovies}) {
             <i className="fa-solid fa-magnifying-glass"></i>
             <input 
                 type="search" 
+                id="movie-search"
+                name="movie-search"
                 placeholder="Search for a movie"
                 value={inputValue}
                 onChange={handleChange}
