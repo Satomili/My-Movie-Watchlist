@@ -59,7 +59,7 @@ function App() {
         <Routes>
             <Route 
               path="/" 
-              element={<Home addToMyWatchlist={addToMyWatchlist} />} 
+              element={<Home setNotification={setNotification} addToMyWatchlist={addToMyWatchlist} />} 
             />
             <Route 
               path="/watchlist" 

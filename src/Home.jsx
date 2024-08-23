@@ -4,7 +4,7 @@ import MovieList from "./MovieList"
 import { useState } from "react"
 const apiKey = "5d1ecff" // API key for OMDB API
 
-export default function Home({ addToMyWatchlist }) {
+export default function Home({ setNotification, addToMyWatchlist }) {
     const [movies, setMovies] = useState([])
 
     const fetchMovies = async(value) => {
@@ -18,7 +18,11 @@ export default function Home({ addToMyWatchlist }) {
             }
             setMovies(moviesWithDetails)
         } else {
-            console.log("no movie")
+            setNotification({ 
+                message: "Unable to find what you’re looking for. Please try another search.", 
+                isShow: true,
+                isInWatchlist: false
+            })
         }
     }
 
