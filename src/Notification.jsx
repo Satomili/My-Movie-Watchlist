@@ -1,4 +1,5 @@
 import './Notification.css'
+import { Link } from 'react-router-dom'
 
 export default function Notification({message, isShow, isInWatchlist}) {
     return (
@@ -7,7 +8,7 @@ export default function Notification({message, isShow, isInWatchlist}) {
                 <i className="fa-solid fa-check"></i>
                 <div className="notification-message">
                     <h3>{message}</h3>
-                    {!isInWatchlist && <p>Check your watchlist from <b><a href="/watchlist">here</a></b></p>}
+                    {!isInWatchlist && <p>Check your watchlist from <b><Link to="/watchlist">here</Link></b></p>}
                 </div>
             </div>
         </div>
