@@ -2,7 +2,7 @@
 
 ## Description
 
-Movie Watchlist is a React-based web application that allows users to track and manage their favorite movies. You can search for movies, add them to your watchlist, view detailed information, and remove movies from your list.
+Movie Watchlist is a React-based web application that allows users to track and manage their favorite movies. The application gets movie information from the OMDB API and allows users to search for movies, view detailed information, add movies to a watch list, and remove movies from the list.
 
 ## Features
 
@@ -12,6 +12,9 @@ Movie Watchlist is a React-based web application that allows users to track and 
 - Remove movies from your watchlist
 - Real-time notifications for adding and removing movies
 - Responsive design for all devices
+
+## API
+- OMDB API: This application uses the OMDB API to fetch movie data. You will need an API key from OMDB to access movie information. You can get a free API key by signing up at OMDB API( <https://www.omdbapi.com/> ).
 
 ## Installation
 
@@ -53,11 +56,20 @@ To run the project locally, follow these steps:
 
 - **React :** JavaScript library for building user interfaces
 - **JavaScript :** ES6 and later
+- **HTML :** HTML5
 - **CSS :** Modern styling techniques including Flexbox and Grid Layout
+- **OMDB API :** Used to fetch mobie data and provide detailed information about movies
+
+## Dependencies
+
+- React
+- React-DOM
+- React-Router-DOM
+- Vite
 
 ## Usage
 
 1. Open your browser and navigate to the local server started by `npm run dev`.
 2. Use the search bar to find movies by title.
-3. Click "+ Watchlist" button to add a movie to your watchlist.
-4. Manage your watchlist from the watchlist page, where you can remove movies by clicking the "- Remove" button.
+3. Click `+ Watchlist` button to add a movie to your watchlist.
+4. Manage your watchlist from the watchlist page, where you can remove movies by clicking the `- Remove` button.
