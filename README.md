@@ -67,6 +67,12 @@ To run the project locally, follow these steps:
 - React-Router-DOM
 - Vite
 
+## Demo
+
+<div  align="center">
+    <img src="./src/assets/my-movie-watchlist-demo.gif">
+</div>
+
 ## Usage
 
 1. Open your browser and navigate to the local server started by `npm run dev`.
