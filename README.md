@@ -79,3 +79,21 @@ To run the project locally, follow these steps:
 2. Use the search bar to find movies by title.
 3. Click `+ Watchlist` button to add a movie to your watchlist.
 4. Manage your watchlist from the watchlist page, where you can remove movies by clicking the `- Remove` button.
+
+## Build
+
+To create a production build of the project, run:
+ ```
+npm run build
+```
+
+## Deployment
+
+To deploy the application on Netlify, follow these steps:
+
+1. Create a production build using `npm run build`.
+2. Log in to your Netlify account.
+3. Click "New site from Git" and connect your GitHub repository.
+4. Choose the my-movie-watchlist repository and select the main branch.
+5. In the build settings, set the build command to npm run build and the publish directory to dist.
+6. Click "Deploy site" to start the deployment process.
